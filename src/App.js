@@ -1,7 +1,13 @@
-import "./App.css";
-import Sidebar from "./Components/Sidebar";
-import BaseRoutes from "./Routing/BaseRoutes";
+import React from "react";
+import EmployeeList from "./Components/EmployeesList";
 
-export default function App() {
-	return <BaseRoutes />;
+function App() {
+	return (
+		<div>
+			<h1>Employee List</h1>
+			<EmployeeList />
+		</div>
+	);
 }
+
+export default App;
