@@ -1,4 +1,3 @@
-// EmployeeList.js
 import React, { useState, useEffect } from "react";
 import employeesJSON from "./employees.json";
 
