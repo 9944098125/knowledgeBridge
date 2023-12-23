@@ -6,6 +6,23 @@ const EmployeeList = () => {
 	const [ageFilter, setAgeFilter] = useState([]);
 	const [salaryFilter, setSalaryFilter] = useState([]);
 
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch(
+					"https://dummy.restapiexample.com/api/v1/employees"
+					// "https://jsonplaceholder.typicode.com/users"
+				);
+				const data = await response.json();
+				console.log(data);
+			} catch (error) {
+				console.error("Error fetching data:", error);
+			}
+		};
+
+		fetchData();
+	}, []);
+
 	const filterEmployees = () => {
 		return employees.filter((employee) => {
 			const ageInRange =
